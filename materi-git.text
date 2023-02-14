@@ -1,0 +1,50 @@
+Tugas hari ini mempelajari 
+- git add : sudah
+- git commit : sudah
+- git push
+- git branch
+- checkout antar branch
+- merge antar branch
+
+GIT
+A. git command (local)
+- $ git init   => untuk menginisialisasi repo git di komputer
+- $ git add <file(s)>  => untuk menambahkan file ke dalam statge area
+- $ git status => untuk mengetahui status repo, seperti "ada file baru atau tidak?, ada file yang berubah tidak?"
+- $ git commit => untuk melakukan commit
+- $ git config => untuk memasuki konfigurasi ke dalam git
+- $ git branch => untuk membuat branch
+- $ get help     => untuk membantu menggunakan perintah dengan cepat
+- $ git checkout => perintah untuk mengembalikan file yang telah di deleate. 
+tambahan git command
+- $ git add . => digunakan untuk meng add semua file 
+- $ git commit -m => digunakan ketika sudah meng-add sebuah file
+- $ git commit -am => digunakan ketika terjadi perubahan didalam sebuah file
+- $ alias graph="git log --all --decorate --oneline --graph" => alias untuk mempersingkat sebuah perintah yang digunakan. perintah graph digunakan untuk mengetahui susunan dari branch nya
+
+B. 3 area pada repo git
+- Working tree => tempat untuk bekerja nya
+- staging area => memberitahu git ada perubahan yang terjadi
+- history      => jika sudah commit maka dimasukkan kedalam history
+
+C. Branch
+- git checkout <nama_branch> => digunakan ketika ingin menuju branch yang lain
+- git branch -d => digunakan untuk menghapus branch yang sudah dimerge
+- git branch -D => digunakan untuk menghapus branch
+- git branch --merged => untuk mengetahui branch apa saja yang sudah di merge
+
+D. Materi Merge
+*Fast Forward => terjadi ketika branch yang ingin digabungkan berada dalam jalur langsung/direct path
+- $ git merge <nama_branch> => untuk menggabungkan branch yang lain ke dalam master (harus pindah ke master terlebih dahulu sebelum melakukan merge)
+*Three-way Merge => terjadi sebuah merge commit
+- ketika terjadi three-way merge maka kita harus commit,dan ketika dijalankan akan diarahkan ke dalam vim(code editor dari git bash) maka kita perlu melakukan (esc + :wq!)
+*Penjelasan merge conflict
+=> Terjadi perubahan pada branch disebuah file yang sama dengan di master 
+
+langkah2 untuk mengembalikan sebuah branch 
+1. ketik git log, lalu cari commit yang ingin dikembalikan
+2. git checkout <kode_commit> => ketik 7 digit dari commit yang ingin dikembalikan
+*detached HEAD => point head lepas dari branch
+3. git branch <nama_branch_baru>
+4. git checkout <nama_branch_baru> => maka otomatis masuk kedalam branch baru dengan commit yang diinginkan tadi
+
