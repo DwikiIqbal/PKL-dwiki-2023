@@ -57,6 +57,9 @@ E. Git Remote
 - $ git push => untuk menyelaraskan branch master dengan remote/origin nya. supaya sama kita harus kirim perubahannya ke remote dengan perintah push
 - $ git fetch => untuk mengecek commit yang ada diremote sudah sampai mana
 - $ git pull => menarik file dari github ke dalam code editor kita dan terjadi sebuah merge conflict
+- $ git remote add <nama_remote_baru> => digunakan untuk menambah remote baru. dapat digunakan ketika ingin memakai 2 remote untuk mengakses repo yang 
+                                         digithub kita dan repo yang sudah kita fork syaratnya harus meng clone dari repo yang kita fork 
+- $ git fetch <nama_remote> => untuk menyamakan posisi commit nya. agar dapat menghubungkan remote yang baru dengan remote default dengan kondisi commit yang sama
 
 
 
