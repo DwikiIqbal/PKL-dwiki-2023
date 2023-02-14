@@ -16,11 +16,13 @@ A. git command (local)
 - $ git branch => untuk membuat branch
 - $ get help     => untuk membantu menggunakan perintah dengan cepat
 - $ git checkout => perintah untuk mengembalikan file yang telah di deleate. 
+- $ clone <link_github> => untuk melakukan git remote
 tambahan git command
 - $ git add . => digunakan untuk meng add semua file 
 - $ git commit -m => digunakan ketika sudah meng-add sebuah file
 - $ git commit -am => digunakan ketika terjadi perubahan didalam sebuah file
 - $ alias graph="git log --all --decorate --oneline --graph" => alias untuk mempersingkat sebuah perintah yang digunakan. perintah graph digunakan untuk mengetahui susunan dari branch nya
+- $ mkdir <nama_folder> => mkdir atau make directory adalah perintah untuk membuat sebuah folder dll.
 
 B. 3 area pada repo git
 - Working tree => tempat untuk bekerja nya
@@ -47,4 +49,15 @@ langkah2 untuk mengembalikan sebuah branch
 *detached HEAD => point head lepas dari branch
 3. git branch <nama_branch_baru>
 4. git checkout <nama_branch_baru> => maka otomatis masuk kedalam branch baru dengan commit yang diinginkan tadi
+5. selesai
+
+E. Git Remote
+- $ git remote => ketika meng-cloning sebuah repo dari github otomatis nama default nya adalah origin(nama nya boleh bebas)
+*git remote -v => untuk melihat lebih detail dari remote nya
+- $ git push => untuk menyelaraskan branch master dengan remote/origin nya. supaya sama kita harus kirim perubahannya ke remote dengan perintah push
+- $ git fetch => untuk mengecek commit yang ada diremote sudah sampai mana
+- $ git pull => menarik file dari github ke dalam code editor kita dan terjadi sebuah merge conflict
+
+
+
 
