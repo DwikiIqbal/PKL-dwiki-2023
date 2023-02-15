@@ -21,8 +21,10 @@ tambahan git command
 - $ git add . => digunakan untuk meng add semua file 
 - $ git commit -m => digunakan ketika sudah meng-add sebuah file
 - $ git commit -am => digunakan ketika terjadi perubahan didalam sebuah file
+- $ git checkout -b => dua perintah langsung dijalankan. dibuat lalu diahlikan ke branch baru 
 - $ alias graph="git log --all --decorate --oneline --graph" => alias untuk mempersingkat sebuah perintah yang digunakan. perintah graph digunakan untuk mengetahui susunan dari branch nya
 - $ mkdir <nama_folder> => mkdir atau make directory adalah perintah untuk membuat sebuah folder dll.
+- $ code . => untuk membuka text editor
 
 B. 3 area pada repo git
 - Working tree => tempat untuk bekerja nya
@@ -62,6 +64,25 @@ E. Git Remote
                                          digithub kita dan repo yang sudah kita fork syaratnya harus meng clone dari repo yang kita fork 
 - $ git fetch <nama_remote> => untuk menyamakan posisi commit nya. agar dapat menghubungkan remote yang baru dengan remote default dengan kondisi commit yang sama
 
+Langkah2 memakai Remote Branch
+1. buat branch terlebih dahulu
+2. lalu masuk ke dalam branch nya
+3. edit yang kalian inginkan didalam file itu
+4. lalu add dan commit
+5. push ke github branch nya => git push origin <nama_branch>
+6. masuk ke dalam repo di github kalian
+7. lakukan pull & request. tunggu setelah di aprove
+8. setelah itu git fetch ke remote nya yang di forked
+- $ git push origin --delete <nama_branch> => menghapus remote 
+- $ git push origin master => repo di github dimasukkan/push ke dalam lokal
 
+F. .gitignore
+=> sebuah file yang bisa kita simpan kedalam repository agar ketika melakukan add dan commit ada file yang tidak ikut terbawa
+- buat file .gitignore didalam repo untuk menjalankan .gitignore nya
+- note : > config.txt => nama file
+         > data/      => nama folder
+         > *.exe      => semua file yang extension exe tidak terbawa
+- jika bingung ingin meng ignore apa saja kunjungi github.com/github/gitignore atau gitignore.io
 
-
+G. git rebase
+Git rebase adalah salah satu fitur Git yang berguna untuk menggabungkan dua cabang atau branch pada Git dan mengubah sejarah commit-nya menjadi satu garis lurus.
