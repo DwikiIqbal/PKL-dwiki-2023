@@ -16,7 +16,7 @@ A. git command (local)
 - $ git branch => untuk membuat branch
 - $ get help     => untuk membantu menggunakan perintah dengan cepat
 - $ git checkout => perintah untuk mengembalikan file yang telah di deleate. 
-- $ clone <link_github> => untuk melakukan git remote
+
 tambahan git command
 - $ git add . => digunakan untuk meng add semua file 
 - $ git commit -m => digunakan ketika sudah meng-add sebuah file
@@ -52,6 +52,7 @@ langkah2 untuk mengembalikan sebuah branch
 5. selesai
 
 E. Git Remote
+- $ git clone <link_github> => untuk melakukan git remote
 - $ git remote => ketika meng-cloning sebuah repo dari github otomatis nama default nya adalah origin(nama nya boleh bebas)
 *git remote -v => untuk melihat lebih detail dari remote nya
 - $ git push => untuk menyelaraskan branch master dengan remote/origin nya. supaya sama kita harus kirim perubahannya ke remote dengan perintah push
