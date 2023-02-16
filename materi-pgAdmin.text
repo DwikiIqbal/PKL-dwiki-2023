@@ -3,7 +3,7 @@ DATABASE
 A. Type data
 beberapa jenis tipe data yang umum digunakan dalam basis data, beserta penjelasan dan contohnya:
 
-- INTEGER: untuk menyimpan nilai bilangan bulat. Tipe data ini dapat menyimpan nilai positif atau negatif. Contoh: 1, 2, 3, -1, -2, -3.
+- INTEGER: untuk menyimpan nilai bilangan bulat. Tipe data ini dapat menyimpan nilai positif atau negatif. Contoh: 1, 2, 3, -1, -2, -3. Tidak disarankan menggunakan parameter
 CREATE TABLE nama_tabel (
    id INTEGER PRIMARY KEY,
    umur INTEGER NOT NULL,
@@ -55,7 +55,8 @@ CREATE TABLE nama_tabel (
    deskripsi TEXT
 );
 
-*Primary key adalah sebuah konsep penting dalam basis data yang digunakan untuk mengidentifikasi secara unik setiap baris atau record dalam sebuah tabel. 
+CATATAN TAMBAHAN
+*Primary key => untuk mengidentifikasi secara unik setiap baris atau record dalam sebuah tabel. 
 CREATE TABLE mahasiswa (
    nim INTEGER PRIMARY KEY,
    nama VARCHAR(50) NOT NULL,
@@ -63,12 +64,36 @@ CREATE TABLE mahasiswa (
    tanggal_lahir DATE,
    jurusan VARCHAR(50) NOT NULL
 );
+*NOT NULL => digunakan ketika ingin dijadikan sebagai kolom kosong
 
-
-
-Cara membuat table 
-- CREATE TABLE <nama_table> {
-// isi kolom bebas
-    kode_kelas CHAR         
-
+*Cara membuat table 
+CREATE TABLE <nama_table> {
+   coloumn1,
+   coloum2,
+   ...
 }
+
+*Cara mengisi kolom pada table
+INSERT INTO table_name (column1, coloumn2, ...) VALUES (apa yang ingin diisi dengan tanda kutip satu '')
+note => VARCHAR & CHAR perlu menggunakan '' , sedangkan int tidak perlu
+
+*Cara update isi kolom
+UPDATE table_name SET column1 = value1, column2 = value2, ... WHERE condition;
+
+*Cara Mengubah nama column & table
+ALTER TABLE table_name RENAME COLOUMN old_column TO new_column;
+ALTER TABLE table_name RENAME TO new_table_name
+
+*Cara Mengurutkan column table sesuai urutan huruf
+SELECT * FROM table_name ORDER BY column_name ASC  (untuk urutan huruf dari atas)
+SELECT * FROM table_name ORDER BY column_name DESC (untuk urutan huruf dari bawah)
+SELECT * FROM table_name ORDER BY column_name ASC/DESC LIMIT 1 (untuk membatasi column yang dihasilkan)
+
+
+
+
+
+
+
+
+
