@@ -1,0 +1,74 @@
+DATABASE
+
+A. Type data
+beberapa jenis tipe data yang umum digunakan dalam basis data, beserta penjelasan dan contohnya:
+
+- INTEGER: untuk menyimpan nilai bilangan bulat. Tipe data ini dapat menyimpan nilai positif atau negatif. Contoh: 1, 2, 3, -1, -2, -3.
+CREATE TABLE nama_tabel (
+   id INTEGER PRIMARY KEY,
+   umur INTEGER NOT NULL,
+   jumlah_anak INTEGER
+);
+
+- VARCHAR: untuk menyimpan data karakter atau string. Tipe data ini memiliki panjang yang dapat bervariasi. Contoh: "Hello", "World", "John", "Doe".
+CREATE TABLE nama_tabel (
+   nama VARCHAR(50) NOT NULL,
+   alamat VARCHAR(100),
+   kota VARCHAR(50) NOT NULL
+);
+
+- BOOLEAN: untuk menyimpan nilai true atau false. Contoh: true, false.
+CREATE TABLE nama_tabel (
+   id INTEGER PRIMARY KEY,
+   aktif BOOLEAN NOT NULL
+);
+
+- DATE   : untuk menyimpan nilai tanggal. Tipe data ini biasanya digunakan untuk menyimpan tanggal dalam format YYYY-MM-DD. Contoh: 2023-02-16.
+CREATE TABLE nama_tabel (
+   id INTEGER PRIMARY KEY,
+   tanggal_lahir DATE,
+   tanggal_terdaftar DATE NOT NULL
+);
+
+- FLOAT  : untuk menyimpan bilangan pecahan atau desimal. Tipe data ini memiliki presisi yang lebih rendah dibandingkan dengan tipe data DECIMAL. Contoh: 3.14, 0.1234, 1.0.
+CREATE TABLE nama_tabel (
+   id INTEGER PRIMARY KEY,
+   harga FLOAT NOT NULL
+);
+
+- DECIMAL: untuk menyimpan bilangan pecahan atau desimal dengan presisi yang lebih tinggi. Tipe data ini biasanya digunakan untuk menghitung uang atau nilai yang memerlukan presisi tinggi. Contoh: 1.23, 1000.00, 0.05.
+CREATE TABLE nama_tabel (
+   id INTEGER PRIMARY KEY,
+   gaji DECIMAL(10, 2) NOT NULL
+);
+
+- TIME   : untuk menyimpan nilai waktu. Tipe data ini biasanya digunakan untuk menyimpan waktu dalam format HH:MM:SS. Contoh: 12:00:00, 13:30:45.
+CREATE TABLE nama_tabel (
+   id INTEGER PRIMARY KEY,
+   waktu_mulai TIME,
+   waktu_selesai TIME NOT NULL
+);
+
+- TEXT   : untuk menyimpan data karakter atau string yang panjangnya melebihi batas panjang yang bisa ditampung oleh VARCHAR. Tipe data ini biasanya digunakan untuk menyimpan data teks panjang seperti dokumen atau catatan. Contoh: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam velit in felis iaculis, non laoreet massa eleifend."
+CREATE TABLE nama_tabel (
+   id INTEGER PRIMARY KEY,
+   deskripsi TEXT
+);
+
+*Primary key adalah sebuah konsep penting dalam basis data yang digunakan untuk mengidentifikasi secara unik setiap baris atau record dalam sebuah tabel. 
+CREATE TABLE mahasiswa (
+   nim INTEGER PRIMARY KEY,
+   nama VARCHAR(50) NOT NULL,
+   alamat VARCHAR(100),
+   tanggal_lahir DATE,
+   jurusan VARCHAR(50) NOT NULL
+);
+
+
+
+Cara membuat table 
+- CREATE TABLE <nama_table> {
+// isi kolom bebas
+    kode_kelas CHAR         
+
+}
