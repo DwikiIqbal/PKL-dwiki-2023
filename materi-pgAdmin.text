@@ -80,14 +80,27 @@ note => VARCHAR & CHAR perlu menggunakan '' , sedangkan int tidak perlu
 *Cara update isi kolom
 UPDATE table_name SET column1 = value1, column2 = value2, ... WHERE condition;
 
-*Cara Mengubah nama column & table
+*Cara Mengubah nama column & table 
 ALTER TABLE table_name RENAME COLOUMN old_column TO new_column;
 ALTER TABLE table_name RENAME TO new_table_name
+
+*Cara Mengubah type data pada sebuah column
+ALTER TABLE table_name ALTER COLUMN column_name TYPE type_data;
 
 *Cara Mengurutkan column table sesuai urutan huruf
 SELECT * FROM table_name ORDER BY column_name ASC  (untuk urutan huruf dari atas)
 SELECT * FROM table_name ORDER BY column_name DESC (untuk urutan huruf dari bawah)
 SELECT * FROM table_name ORDER BY column_name ASC/DESC LIMIT 1 (untuk membatasi column yang dihasilkan)
+
+*Cara Menghapus kolom pada table database
+ALTER TABLE table_name DROP COLUMN column_name;
+
+*Cara Menghapus data pada table 
+DELETE FROM table_name WHERE condition;
+
+*Cara mengelompokkan penjualan berdasarkan nama produk, dan menampilkan total kuantitas produk yang terjual.
+SELECT product_name, SUM(quantity) FROM sales GROUP BY product_name;
+
 
 
 
