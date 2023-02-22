@@ -80,6 +80,26 @@ note => VARCHAR & CHAR perlu menggunakan '' , sedangkan int tidak perlu
 *Cara update isi kolom
 UPDATE table_name SET column1 = value1, column2 = value2, ... WHERE condition;
 
+*Cara mengambilkan hanya nilai yang berbeda(mengatasi isi data yang banyak duplikatnya)
+SELECT DISTINCT column1, column2, ... FROM table_name;
+
+*Operator AND menampilkan record jika semua kondisi dipisahkan dengan AND BENAR.
+SELECT column1, column2, ... FROM table_name WHERE condition1 AND condition2 AND condition3 ...;
+
+*Cara menggabungkan AND dan OR
+SELECT * FROM Customers
+WHERE Country='Germany' AND (City='Berlin' OR City='München');
+
+*Cara menggabungkan AND dan NOT
+SELECT * FROM Customers
+WHERE NOT Country='Germany' AND NOT Country='USA';
+
+*Operator OR menampilkan catatan jika salah satu kondisi yang dipisahkan oleh ORadalah BENAR.
+SELECT column1, column2, ... FROM table_name WHERE condition1 OR condition2 OR condition3 ...;
+
+*Operator NOT menampilkan catatan jika kondisinya TIDAK BENAR.
+SELECT column1, column2, ... FROM table_name WHERE NOT condition;
+
 *Cara Mengubah nama column & table 
 ALTER TABLE table_name RENAME COLOUMN old_column TO new_column;
 ALTER TABLE table_name RENAME TO new_table_name
@@ -100,6 +120,46 @@ DELETE FROM table_name WHERE condition;
 
 *Cara mengelompokkan penjualan berdasarkan nama produk, dan menampilkan total kuantitas produk yang terjual.
 SELECT product_name, SUM(quantity) FROM sales GROUP BY product_name;
+
+*Cara menampilkan beberapa data teratas
+SELECT TOP 3 * FROM table_name;
+
+*Cara menampilkan data sesuai yang kita butuhkan
+SELECT * FROM table_name LIMIT 3;
+
+*Cara menemukan nominal terendah
+SELECT MIN(column_name/price) AS SmallestPrice/alias_name FROM table_name;
+
+*Cara menemukan nominal tertinggi
+SELECT MAX(column_name/price) AS LargestPrice/alias_name FROM table_name;
+
+*Cara mengembalikan jumlah baris yang cocok dengan kriteria yang ditentukan
+SELECT COUNT(column_name)
+FROM table_name
+WHERE condition;
+
+*Cara mengembalikan nilai rata rata kolom numerik
+SELECT AVG(column_name)
+FROM table_name
+WHERE condition;
+
+*Cara mengembalikan jumlah total kolom numerik
+SELECT SUM(column_name)
+FROM table_name
+WHERE condition;
+
+*Cara mencari pola tertentu dalam kolom
+SELECT column1, column2, ...
+FROM table_name
+WHERE columnN LIKE pattern;
+
+WHERE CustomerName LIKE 'a%'	memilih semua pelanggan dengan CustomerName dimulai dengan "a":
+WHERE CustomerName LIKE '%a'	memilih semua pelanggan dengan CustomerName diakhiri dengan "a":
+WHERE CustomerName LIKE '%or%'	memilih semua pelanggan dengan CustomerName yang memiliki "or" di posisi apa pun:
+WHERE CustomerName LIKE '_r%'	memilih semua pelanggan dengan CustomerName yang memiliki "r" di posisi kedua:
+WHERE CustomerName LIKE 'a_%'	memilih semua pelanggan dengan CustomerName yang dimulai dengan "a" dan panjangnya minimal 2 karakter:
+WHERE CustomerName LIKE 'a__%'	memilih semua pelanggan dengan CustomerName yang dimulai dengan "a" dan panjangnya minimal 3 karakter:
+WHERE ContactName LIKE 'a%o'	memilih semua pelanggan dengan ContactName yang dimulai dengan "a" dan diakhiri dengan "o":
 
 
 
