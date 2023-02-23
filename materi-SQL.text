@@ -1,6 +1,25 @@
 DATABASE
 
-A. Type data
+A. Perintah Dalam SQL (structured Query Language)
+
+- DDL (Data Definition Language):
+DDL digunakan untuk membuat, mengubah, dan menghapus objek basis data seperti tabel, indeks, dan konstrain. Beberapa contoh perintah DDL antara lain:
+   CREATE
+   ALTER
+   DROP
+   
+- DML (Data Manipulation Language):
+DML digunakan untuk menambah, mengubah, dan menghapus data dalam tabel yang sudah ada. Beberapa contoh perintah DML antara lain:
+   INSERT
+   UPDATE
+   DELETE
+   
+- DCL (Data Control Language):
+DCL digunakan untuk mengontrol akses ke objek basis data. Beberapa contoh perintah DCL antara lain:
+   GRANT 
+   REVOKE
+
+B. Type data
 beberapa jenis tipe data yang umum digunakan dalam basis data, beserta penjelasan dan contohnya:
 
 - INTEGER: untuk menyimpan nilai bilangan bulat. Tipe data ini dapat menyimpan nilai positif atau negatif. Contoh: 1, 2, 3, -1, -2, -3. Tidak disarankan menggunakan parameter
@@ -72,6 +91,11 @@ CREATE TABLE <nama_table> {
    coloum2,
    ...
 }
+*Cara melihat struktur table yang sudah dibuat
+SHOW CREATE TABLE table_name
+
+*Cara membuat ulang table atau menghapus semua data pada table
+TRUNCATE table_name
 
 *Cara mengisi kolom pada table
 INSERT INTO table_name (column1, coloumn2, ...) VALUES (apa yang ingin diisi dengan tanda kutip satu '')
