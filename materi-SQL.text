@@ -83,6 +83,18 @@ CREATE TABLE mahasiswa (
    tanggal_lahir DATE,
    jurusan VARCHAR(50) NOT NULL
 );
+
+atau 
+
+CREATE TABLE mahasiswa (
+   nim INT,
+   nama VARCHAR(50) NOT NULL,
+   alamat VARCHAR(100),
+   tanggal_lahir DATE,
+   jurusan VARCHAR(50) NOT NULL
+   primary key('nim')
+);
+
 *NOT NULL => digunakan ketika ingin dijadikan sebagai kolom kosong
 
 *Cara membuat table 
@@ -104,6 +116,11 @@ note => VARCHAR & CHAR perlu menggunakan '' , sedangkan int tidak perlu
 *Cara update isi kolom
 UPDATE table_name SET column1 = value1, column2 = value2, ... WHERE condition;
 
+*Cara mengambil data dari tabel
+SELECT column1, column2, ... FROM table_name
+
+*Cara mengambil data sesuai yang kita inginkan
+SELECT * FROM table_name WHERE condition
 *Cara mengambilkan hanya nilai yang berbeda(mengatasi isi data yang banyak duplikatnya)
 SELECT DISTINCT column1, column2, ... FROM table_name;
 
@@ -185,6 +202,25 @@ WHERE CustomerName LIKE 'a_%'	memilih semua pelanggan dengan CustomerName yang d
 WHERE CustomerName LIKE 'a__%'	memilih semua pelanggan dengan CustomerName yang dimulai dengan "a" dan panjangnya minimal 3 karakter:
 WHERE ContactName LIKE 'a%o'	memilih semua pelanggan dengan ContactName yang dimulai dengan "a" dan diakhiri dengan "o":
 
+*Cara memberi alias pada sebuah kolom
+SELECT column1 as 'nama alias',
+       column2 as 'nama alias'
+FROM table_name;
+
+atau
+
+SELECT (nama alias dari table_name).column1 as 'nama alias',
+       (nama alias dari table_name).column2 as 'nama alias'
+FROM table_name as 'nama alias';
+
+*Cara mencari data yang berisi NULL 
+SELECT * FROM table_name WHERE column1 IS NULL/NOT NULL;
+
+*Cara mencari data yang <= dan >= secara sekaligus
+SELECT * FROM table_name WHERE BETWEEN 10000 AND 20000;
+
+*Cara melakukan pencarian sebuah kolom dengan beberapa nilai
+SELECT * FROM table_name WHERE column IN ('opsi1', 'opsi2')
 
 
 
