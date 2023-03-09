@@ -1,6 +1,6 @@
 TYPESCRIPT
 
-*set up typescript didalam terminal vscode
+A. set up typescript didalam terminal vscode
   1. syarat nya npm dan node sudah terpasang
   2. npm i -g typescript => penginstalan tsc secara global
   3. tsc --init => folder ini akan diset up untuk config dari typescript secara default
@@ -36,18 +36,41 @@ TYPESCRIPT
   // Annotation type untuk fungsi
   type Calculation = (x: number, y: number) => number;  
   
-  *TIPS AND TRICK 
+  B. TIPS AND TRICK
+  
+  * pada terminal
   - 'tsc' => artinya akan membundle si typescript ke folder yang sudah diset up yaitu ./bundle. Isinya adalah sebuah file javscript hasil compile an typescript (digunakan pada terminal)
   - console.log({variable}) => variable akan diubah menjadi sebuah object
   - tsc && node bundle/nama_file => untuk merunning hasil bundling nya
+  
+  ---------------
+  
+  * pada variabel 
   - any[] => mendefinisikan sebuah array (daftar nilai) yang berisi nilai apapun (dapat berupa tipe data apa pun)
   - let myVariable: string | number | ... => digunakan untuk memberi typedata lebih dari satu
   - let myVariable: string[] / [string, number, boolean] => contoh dari array biasa dan tuple array
-  - type nama_type = { nama: string; kelakuanBaik: boolean; hutang?: number } => digunakan ketika mebuat tipe data custom. tanda tanya '?' setelah objek itu menjadi opsional
   - let myVariabel: nama_type; => cara memakai tipe data custom pada variabel tertentu
-  - const add = (x: number, y: number): string =>  `${x} ditambah ${y} hasilnya ${x + y}`; => cara melakukan typescript pada arrow function
+  
+  ---------------
+  
+  * cara membuat custom tipe data
+  - type nama_type = { nama: string; kelakuanBaik: boolean; hutang?: number } => digunakan ketika mebuat tipe data custom. tanda tanya '?' setelah objek itu menjadi       opsional
   - type nama_type = nama_type1 | nama_type2 => untuk mengcombine type yang lain menjadi 1 
+  
+  --------------
+  
+  * cara mebuat arrow function
+  - const add = (x: number, y: number): string =>  `${x} ditambah ${y} hasilnya ${x + y}`; => cara melakukan typescript pada arrow function
+  
+  --------------
+  
+  * cara membuat interface
   - interface name_interface {} => untuk membuat interface
   - interface name_baru extends name_interface => name_baru memiliki properti yang sama seperti name_interface
   
+  --------------
+  
+  * properti
+  - private  => menunjukkan bahwa variabel tersebut hanya dapat diakses di dalam class tempat variabel tersebut dideklarasikan, dan tidak dapat diakses dari luar           class.
+  - readonly => menunjukkan bahwa nilai variabel tersebut hanya dapat diinisialisasi pada saat deklarasi, dan tidak dapat diubah selama runtime program.
 
