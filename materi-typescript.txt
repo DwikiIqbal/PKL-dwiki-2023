@@ -70,7 +70,13 @@ A. set up typescript didalam terminal vscode
   
   --------------
   
+  *keyword
+  - await => untuk menangani kode async(asynchronus). Dalam kasus yang saya jalani, await           digunakan untuk menunggu hasil dari fungsi yang mengembalikan Promise sehingga kode yang       berada di bawahnya tidak akan dieksekusi sebelum fungsi selesai dijalankan.
+  
+  - where => untuk menentukan kriteria pencarian pada database. Dalam hal ini, kriteria             pencarian adalah id = id, yang artinya mencari data dengan id yang sama dengan nilai dari       variabel id.
+  
   * properti
-  - private  => menunjukkan bahwa variabel tersebut hanya dapat diakses di dalam class tempat variabel tersebut dideklarasikan, dan tidak dapat diakses dari luar           class.
+  - private  => menunjukkan bahwa variabel tersebut hanya dapat diakses di dalam class tempat variabel tersebut dideklarasikan, dan tidak dapat diakses dari luar class.
+  
   - readonly => menunjukkan bahwa nilai variabel tersebut hanya dapat diinisialisasi pada saat deklarasi, dan tidak dapat diubah selama runtime program.
 
