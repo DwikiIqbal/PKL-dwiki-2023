@@ -1,0 +1,59 @@
+React JS
+-+ penjelasan +-
+Sebuah library Javascript yang digunakan untuk membuat tampilan interface (antarmuka) pengguna pada aplikasi web
+
+-+ keuntungan +-
+Efisiensi: React dirancang untuk dapat memperbaharui hanya bagian-bagian tertentu pada halaman 
+web (yang membutuhkan perubahan), sehingga membuat aplikasi lebih efisien dan cepat 
+dalam merespons perubahan-perubahan yang terjadi.
+
+Komponen: React memungkinkan pengembang untuk memecah tampilan aplikasi menjadi 
+komponen-komponen kecil yang dapat digunakan kembali di seluruh aplikasi. Hal ini memudahkan 
+pengembangan aplikasi yang kompleks dan dapat mengurangi waktu pengembangan.
+
+SEO-friendly: React memungkinkan server-side rendering, yang membuat aplikasi lebih ramah 
+terhadap mesin pencari seperti Google.
+
+Konsistensi: React menggunakan struktur kode JSX yang memungkinkan pengembang untuk 
+menulis kode yang lebih mudah dipahami dan mudah dikelola.
+
++-----+-----+-----+
+
+Next JS
+-+ penjelasan +-
+sebuah framework JavaScript yang dibangun di atas React.js, yang menyediakan fitur-fitur 
+canggih untuk membangun aplikasi web yang lebih kompleks dengan lebih mudah dan cepat.
+
+-+ keuntungan +-
+Routing: Next.js menyediakan sistem routing bawaan yang memudahkan pengembang untuk membuat rute dan
+navigasi antar halaman di dalam aplikasi web. Dengan fitur ini, pengembang dapat mengatur bagaimana halaman akan 
+ditampilkan pada browser pengguna dan mengatur bagaimana data diambil dan ditampilkan pada halaman tersebut.
+
+Server-side rendering (SSR): Next.js memungkinkan pengembang untuk membangun aplikasi web dengan SSR, di mana aplikasi memuat 
+konten pada sisi server sebelum dikirim ke browser pengguna. SSR dapat mempercepat waktu muat halaman dan meningkatkan SEO, karena konten 
+yang dihasilkan dari SSR lebih mudah diindeks oleh mesin pencari.
+
+Client-side rendering (CSR): Selain SSR, Next.js juga mendukung CSR, yang memungkinkan konten dihasilkan oleh sisi klien (browser pengguna). 
+Next.js menggunakan Virtual DOM untuk mempercepat waktu perenderan dan memperbaharui komponen hanya ketika diperlukan.
+
+Static site generation (SSG): Next.js memungkinkan pengembang untuk membangun situs web statis dengan SSG. Situs web statis memiliki
+keuntungan dalam hal keamanan, kecepatan, dan skala. Next.js dapat menghasilkan situs web statis dengan mengoptimalkan dan mempercepat 
+pengiriman file HTML, CSS, dan JavaScript.
+
+Automatic code splitting: Next.js secara otomatis memecah kode menjadi beberapa bagian (chunks) sehingga dapat diunduh secara independen 
+oleh browser. Hal ini dapat mempercepat waktu muat halaman dan mengurangi beban pada jaringan.
+
+Image optimization: Next.js menyediakan fitur optimasi gambar, yang memungkinkan pengembang untuk memuat 
+gambar dengan resolusi yang optimal sesuai dengan ukuran layar pengguna.
+
+API routes: Next.js menyediakan fitur API routes yang memudahkan pengembang untuk membuat API yang dapat diakses dari sisi klien atau sisi server.
+
+Dukungan untuk TypeScript: Next.js juga mendukung penggunaan TypeScript, sebuah bahasa pemrograman yang 
+memungkinkan pengembang untuk menambahkan tipe data pada kode mereka, sehingga dapat meminimalkan kesalahan dan meningkatkan kemudahan pemeliharaan kode.
+
++-----+-----+-----+
+
+Perbedaan dari React JS dan Next JS => React.js cocok digunakan untuk membangun tampilan (UI) aplikasi web, sedangkan Next.js lebih cocok untuk membangun 
+                                       aplikasi web yang kompleks dengan fitur-fitur seperti server-side rendering, static site generation, dan routing.
+
+
